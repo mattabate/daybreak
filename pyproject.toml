@@ -1,15 +1,26 @@
-[tool.poetry]
+[project]
 name = "daybreak"
-version = "0.1.0"
-description = ""
-authors = ["Matt"]
+version = "0.2.0"
+description = "Cut two periods of days into equal steps that land on the same clock times, in a different order."
+authors = [{ name = "Matt" }]
 readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
 
-[tool.poetry.dependencies]
-python = "^3.12"
-fire = "^0.6.0"
+[project.optional-dependencies]
+dev = ["pytest>=7"]
 
+[project.urls]
+Homepage = "https://mattabate.com/projects"
+Repository = "https://github.com/mattabate/daybreak"
+
+[project.scripts]
+daybreak = "daybreak.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "README.md"]
+addopts = "--doctest-glob=README.md"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0"]
 build-backend = "poetry.core.masonry.api"
