@@ -87,3 +87,7 @@ python3 -m venv .venv
 ```
 
 The tests pin the 5 and 2 answers, check the search against the original script's brute-force loop, and check that the command-line and Python examples in this README are real output.
+
+## License
+
+MIT.
